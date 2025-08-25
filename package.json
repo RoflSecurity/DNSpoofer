@@ -1,6 +1,6 @@
 {
   "name": "@roflsec/dnspoofer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dns-spoofer.js",
   "bin": {
     "dnspoofer": "./cli.js"
