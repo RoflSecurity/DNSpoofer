@@ -4,21 +4,21 @@ DNSpoofer est un module Node.js pour effectuer du DNS spoofing en batch ou conti
 Utile pour solidifier une infrastructure.
 ---
 
-## Installation client
-\`\`\`
+## Installation depuis npm
+```
 npm i -g @roflsec/dnspoofer
-\`\`\`
+```
 
 ou
 
-## Installation locale
+## Installation depuis github
 
-\`\`\`bash
+```
 git clone <repo>
 cd DNSpoofer
 npm install
 npm link
-\`\`\`
+```
 
 > La commande CLI globale \`dnspoofer\` est maintenant disponible.
 
@@ -26,38 +26,34 @@ npm link
 
 ## Commandes
 
-### Spoof simple (test)
-\`\`\`bash
+### Spoof simple
+```
 dnspoofer -server=192.168.0.1 -domain=example.com --test
-\`\`\`
-
-### Spoof réel
-\`\`\`bash
-dnspoofer -server=192.168.0.1 -domain=example.com,example2.com
-\`\`\`
+```
 
 ### Spoof avec custom DNS
-\`\`\`bash
+```
 dnspoofer -server=192.168.0.1 -domain=example.com -dns=custom.json
-\`\`\`
+```
 
 ### Options avancées
-- \`--workers=N\` : nombre de workers (par défaut = nombre de cores CPU)
-- \`--interval=ms\` : délai entre cycles de spoof pour chaque worker (par défaut = 0)
-- \`--test\` : mode test (aucune requête réelle envoyée)
+- `--workers=N` : nombre de workers (par défaut = nombre de cores CPU)
+- `--interval=ms` : délai entre cycles de spoof pour chaque worker (par défaut = 0)
+- `--test` : mode test !
 
 Exemple :
-\`\`\`bash
+```
 dnspoofer -server=192.168.0.1 -domain=example.com -dns=custom.json --workers=4 --interval=1000 --test
-\`\`\`
+```
 
 ---
 
-## Fonctionnalités
+## Fonctionnalités en test
 
 - Multicores continu et stats live toutes les 5 secondes  
 - Queue circulaire pour chaque DNS, pas de répétition avant utilisation de tous  
-- Fusion automatique \`freeDNS.json\` + custom  
+- Fusion automatique `freeDNS.json` + custom
 - Compatible Termux, Debian, Ubuntu, Windows
 
 Lulz
+
